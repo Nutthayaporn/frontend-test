@@ -1,0 +1,76 @@
+.app {
+  padding: 30px 0;
+
+  .scheduler-setting-component {
+    .container-date-picker {
+      display: flex;
+      width: 70%;
+      .date-picker-wrapper {
+        width: 100%;
+      }
+      .end-date-picker {
+        margin-left: 20px;
+      }
+    }
+    .ant-radio-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .radio-wrapper,
+    .container-repeat-every {
+      display: flex;
+      align-items: center;
+    }
+    .ant-form-item {
+      margin: 0;
+    }
+    .container-item {
+      margin-top: 20px;
+    }
+    .input-select {
+      margin: 0 15px;
+    }
+    .container-button {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .button-next {
+        margin-left: 10px;
+      }
+    }
+
+    .container-text-input {
+      border: 1px solid rgb(218, 218, 218);
+      .title-wrapper {
+        background-color: rgb(218, 218, 218);
+        height: 30px;
+      }
+      .input-wrapper {
+        padding: 18px;
+        .input-info-wrapper {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          margin-top: 10px;
+          p {
+            &:first-child {
+              position: relative;
+              padding-right: 10px;
+              margin-right: 10px;
+              &::before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: "";
+                height: 100%;
+                width: 1px;
+                background-color: rgba(0, 0, 0, 0.65);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
