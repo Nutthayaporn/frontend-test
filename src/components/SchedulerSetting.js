@@ -90,7 +90,6 @@ function SchedulerSetting({ config, onSubmit }) {
       week,
       repeatEvery,
     } = values;
-    // console.log("values", values);
 
     const schedule = {
       Mode: mode,
@@ -172,7 +171,7 @@ function SchedulerSetting({ config, onSubmit }) {
                 </Radio>
                 {mode === "day" && (
                   <span className="input-select">
-                    <Form.Item name="day">{renderSelectDay()}</Form.Item>
+                    <Form.Item name="dayOfMonth">{renderSelectDay()}</Form.Item>
                   </span>
                 )}
               </div>
