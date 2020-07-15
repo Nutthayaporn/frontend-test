@@ -12,7 +12,6 @@ const tabs = [
     id: 1,
     key: "sendNow",
     name: "Send Now",
-    icon: "",
     config: {
       showWriteMessage: true,
     },
@@ -21,7 +20,6 @@ const tabs = [
     id: 2,
     key: "oneTime",
     name: "One time",
-    icon: "",
     config: {
       showStartDate: true,
       showWriteMessage: true,
@@ -31,7 +29,6 @@ const tabs = [
     id: 3,
     key: "daily",
     name: "Daily",
-    icon: "",
     config: {
       showStartDate: true,
       showEndDate: true,
@@ -43,7 +40,6 @@ const tabs = [
     id: 4,
     key: "weekly",
     name: "Weekly",
-    icon: "",
     config: {
       showStartDate: true,
       showEndDate: true,
@@ -55,7 +51,6 @@ const tabs = [
     id: 5,
     key: "monthly",
     name: "Monthly",
-    icon: "",
     config: {
       showStartDate: true,
       showEndDate: true,

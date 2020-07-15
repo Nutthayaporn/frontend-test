@@ -64,6 +64,22 @@ function SchedulerSetting({ config, onSubmit }) {
     </Select>
   );
 
+  const renderSelectDay = () => (
+    <Select placeholder="Select Day of Week">
+      {dayOfWeek.map((day) => (
+        <Option value={day?.id}>{day?.name}</Option>
+      ))}
+    </Select>
+  );
+
+  const renderSelectWeek = () => (
+    <Select mode="multiple" placeholder="Select Week" style={{ minWidth: 300 }}>
+      {startOnWeek.map((day) => (
+        <Option value={day?.id}>{day?.name}</Option>
+      ))}
+    </Select>
+  );
+
   const onFinish = (values) => {
     const {
       content,
@@ -138,13 +154,7 @@ function SchedulerSetting({ config, onSubmit }) {
             </Form.Item>
             Week On
             <span className="input-select">
-              <Form.Item name="day">
-                <Select placeholder="Select Day of Week">
-                  {dayOfWeek.map((day) => (
-                    <Option value={day?.id}>{day?.name}</Option>
-                  ))}
-                </Select>
-              </Form.Item>
+              <Form.Item name="day">{renderSelectDay()}</Form.Item>
             </span>
           </div>
         )}
@@ -162,7 +172,7 @@ function SchedulerSetting({ config, onSubmit }) {
                 </Radio>
                 {mode === "day" && (
                   <span className="input-select">
-                    <Form.Item name="month">{renderSelectMonth()}</Form.Item>
+                    <Form.Item name="day">{renderSelectDay()}</Form.Item>
                   </span>
                 )}
               </div>
@@ -175,17 +185,7 @@ function SchedulerSetting({ config, onSubmit }) {
                 </Radio>
                 {mode === "week" && (
                   <span className="input-select">
-                    <Form.Item name="week">
-                      <Select
-                        mode="multiple"
-                        placeholder="Select Week"
-                        style={{ minWidth: 300 }}
-                      >
-                        {startOnWeek.map((day) => (
-                          <Option value={day?.id}>{day?.name}</Option>
-                        ))}
-                      </Select>
-                    </Form.Item>
+                    <Form.Item name="week">{renderSelectWeek()}</Form.Item>
                   </span>
                 )}
               </div>
